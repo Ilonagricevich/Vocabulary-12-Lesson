@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.0" prefWidth="620.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vocabularylesson12.HelloController">
+   <children>
+      <Button layoutX="255.0" layoutY="80.0" mnemonicParsing="false" onAction="#addToCollection" prefHeight="25.0" prefWidth="98.0" text="Добавить" />
+      <Button layoutX="255.0" layoutY="117.0" mnemonicParsing="false" onAction="#editeTheWord" text="Редактировать" />
+      <Button layoutX="255.0" layoutY="154.0" mnemonicParsing="false" onAction="#deleteFromTheCollection" prefHeight="25.0" prefWidth="98.0" text="Удалить" />
+      <TextField fx:id="ValueInput" layoutX="28.0" layoutY="28.0" prefHeight="25.0" prefWidth="200.0" />
+      <TextField fx:id="KeyInput" layoutX="380.0" layoutY="28.0" prefHeight="25.0" prefWidth="200.0" />
+      <ListView fx:id="listViewKeys" layoutX="28.0" layoutY="65.0" prefHeight="200.0" prefWidth="200.0" />
+      <ListView fx:id="listViewValues" layoutX="380.0" layoutY="67.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button layoutX="549.0" layoutY="276.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Exit" onAction="#closeTheWindow" fx:id="closeTheWindow"/>
+   </children>
+</AnchorPane>
