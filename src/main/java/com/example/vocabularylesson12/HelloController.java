@@ -2,6 +2,7 @@ package com.example.vocabularylesson12;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.MultipleSelectionModel;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -36,19 +37,21 @@ public class HelloController {
         vocabulary.remove(deletedWord);
         listViewKeys.getItems().remove(deletedWord);
         listViewValues.getItems().remove(deletedWord);
+
     }
     public void editeTheWord(ActionEvent actionEvent){
-        int editedWord = listViewValues.getSelectionModel().getSelectedIndex();
-        listViewValues.getItems().remove(editedWord);
-        String word = listViewValues.getSelectionModel().getSelectedItem().toString();
+        MultipleSelectionModel editedWord = listViewValues.getSelectionModel();
+        listViewValues.getItems().remove(editedWord.getSelectedIndex());
+        String word = editedWord.toString();
         String V = word;
         String K ="";
         for (String Key : vocabulary.keySet()){
             if (vocabulary.get(Key).equals(V) )  {
                 K = Key;
                 break; }}
-        listViewValues.getItems().add(K);
-        vocabulary.put(K,ValueInput.getText());
+        listViewValues.getItems().add(KeyInput.getText());
+        ValueInput.clear();
+        vocabulary.put(K,KeyInput.getText());
     }
 
     public void closeTheWindow(ActionEvent actionEvent) {
